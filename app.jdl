@@ -1,0 +1,23 @@
+entity PlatformUser {
+	firstName String
+    lastName String
+    avatarPhotoId String
+}
+
+entity Photo {
+	id String
+}
+
+entity Posts {
+	title String
+    body String
+}
+
+relationship OneToMany {
+	PlatformUser to Photo,
+   	PlatformUser to Posts,
+ 
+}
+
+
+paginate Posts with pagination
